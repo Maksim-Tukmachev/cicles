@@ -11,7 +11,7 @@ public class RestCalc {
                 monthRest++;
             } else {
                 money += income;
-                money -=expense;
+                money -= expense;
             }
 
         }
