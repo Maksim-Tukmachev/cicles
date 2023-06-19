@@ -13,7 +13,6 @@ public class RestCalc {
                 money += income;
                 money -= expense;
             }
-
         }
         return monthRest;
     }
