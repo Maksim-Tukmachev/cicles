@@ -2,16 +2,19 @@ package ru.netology.maven;
 
 public class RestCalc {
     public int restMonth(int income, int expense, int thresold) {
-        int count = 0;
         int money = 0;
-        for (int month = 0; month < 12; month++) {
+        int monthRest = 0;
+        for (int i = 0; i < 12; i++) {
             if (money >= thresold) {
-                count++;
-                money = (money - expense) - money / 3 * 2;
+                money -= expense;
+                money /= 3;
+                monthRest++;
             } else {
-                money = (money + income) - expense;
+                money += income;
+                money -=expense;
             }
+
         }
-        return count;
+        return monthRest;
     }
 }
